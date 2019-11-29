@@ -3,3 +3,4 @@ config
 coverage
 build
 *.spec.js
+serviceWorker.js
