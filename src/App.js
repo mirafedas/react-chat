@@ -1,6 +1,8 @@
 import React from 'react';
 import Particles from 'react-particles-js';
 
+import './App.scss';
+
 const CN = 'app';
 
 const App = () => (
