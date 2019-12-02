@@ -19,7 +19,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint --fix src/**/*.js",
-    "test:all": "set CI=true && react-scripts test && npm run lint"
+    "test:all": "CI=true react-scripts-ts test && npm run lint"
   },
   "husky": {
     "hooks": {
