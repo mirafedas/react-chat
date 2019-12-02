@@ -18,7 +18,7 @@ class SmallChatWindow extends React.Component {
     return (
       <div className={CN}>
         <div className={`${CN}__title-wrapper`}>
-        <IconButton
+          <IconButton
             type="submit"
             className={`${CN}__btn`}
             label="text"
