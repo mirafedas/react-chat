@@ -1,6 +1,8 @@
 import React from 'react';
 import Particles from 'react-particles-js';
 
+import SmallChatWindow from './components/SmallChatWindow';
+
 import './App.scss';
 
 const CN = 'app';
