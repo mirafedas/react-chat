@@ -5,7 +5,6 @@
   flex-direction: column;
   align-items: center;
   width: 300px;
-  height: 400px;
   background-color: $white;
   border: 1px solid $darkgreen;
 
@@ -45,6 +44,7 @@
     align-items: center;
     justify-content: space-between;
     width: 95%;
+    padding-bottom: 5px;
   }
 
   &__dialogue-input {
@@ -57,5 +57,9 @@
     &:hover {
       color: $orange;
     }
+  }
+
+  &__hidden {
+    display: none;
   }
 }

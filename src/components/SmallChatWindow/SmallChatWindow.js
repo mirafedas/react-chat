@@ -12,8 +12,27 @@ import './SmallChatWindow.scss';
 const CN = 'small-window';
 
 class SmallChatWindow extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isMinimized: false
+    };
+
+    this.minimize = this.minimize.bind(this);
+  }
+
+  minimize() {
+    const { isMinimized } = this.state;
+
+    this.setState({
+      isMinimized: !isMinimized
+    });
+  }
+
   render() {
     const chatTitle = 'Chat title';
+    const { isMinimized } = this.state;
 
     return (
       <div className={CN}>
@@ -22,6 +41,7 @@ class SmallChatWindow extends React.Component {
             type="submit"
             className={`${CN}__btn`}
             label="text"
+            onClick={this.minimize}
           >
             <MinimizeOutlinedIcon />
           </IconButton>
@@ -41,10 +61,17 @@ class SmallChatWindow extends React.Component {
             <SettingsApplicationsOutlinedIcon />
           </IconButton>
         </div>
-        <div className={`${CN}__dialogue-wrapper`} />
-        <div className={`${CN}__input-wrapper`}>
-          <TextField className={`${CN}__dialogue-input`} id="outlined-basic" label="Your message" variant="outlined" />
-          <IconButton className={`${CN}__send-btn`}><SendIcon fontSize="large" /></IconButton>
+        <div className={isMinimized ? `${CN}__hidden` : `${CN}__dialogue-wrapper`} />
+        <div className={isMinimized ? `${CN}__hidden` : `${CN}__input-wrapper`}>
+          <TextField
+            className={`${CN}__dialogue-input`}
+            id="outlined-basic"
+            label="Your message"
+            variant="outlined"
+          />
+          <IconButton className={`${CN}__send-btn`}>
+            <SendIcon fontSize="large" />
+          </IconButton>
         </div>
       </div>
     );
