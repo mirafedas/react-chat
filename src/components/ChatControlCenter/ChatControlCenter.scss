@@ -1,0 +1,63 @@
+@import '../../scss/global_styles';
+
+.chat-control-center {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  max-height: 780px;
+  background-color: #fff;
+  border: 1px solid $darkgreen;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    height: 30px;
+    width: 100%;
+    background-color: $limegreen;
+    border-bottom: 1px solid $darkgreen;
+  }
+
+  &__btn {
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    &:hover{
+      color: $orange;
+    }
+  }
+
+  &__title {
+    margin: 10px;
+    margin: auto
+  }
+
+  &__body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: scroll;
+  }
+
+  &__hidden {
+    display: none;
+  }
+
+  &__startjoin-btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    align-items: center;
+  }
+  .startjoin-btn {
+    margin: 10px 0;
+    align-items: center;
+  }
+}

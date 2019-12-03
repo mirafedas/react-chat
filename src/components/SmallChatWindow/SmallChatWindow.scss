@@ -1,6 +1,9 @@
 @import '../../scss/global_styles';
 
 .small-window {
+  position: absolute;
+  right: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,5 +1,6 @@
 import React from 'react';
 import Particles from 'react-particles-js';
+import ChatControlCenter from './components/ChatControlCenter';
 
 import SmallChatWindow from './components/SmallChatWindow';
 import particlesParams from './constants/particlesParams';
@@ -20,7 +21,7 @@ const particlesStyles = {
 const App = () => (
   <div className={CN}>
     <SmallChatWindow />
-
+    <ChatControlCenter />
     <Particles
       params={particlesParams}
       style={particlesStyles}
