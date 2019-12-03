@@ -1,7 +1,7 @@
 import React from 'react';
 import Particles from 'react-particles-js';
 import { DndProvider } from 'react-dnd-cjs';
-import HTML5Backend from 'react-dnd-html5-backend';
+import HTML5Backend from 'react-dnd-html5-backend-cjs';
 
 import ChatControlCenter from './components/ChatControlCenter';
 import Board from './components/Board';
