@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import ActiveChats from '../ActiveChats';
 import RecentlySharedProoducts from '../RecentlySharedProoducts';
 
-import './ChatControlCenter.scss'
+import './ChatControlCenter.scss';
 
 import Button from '@material-ui/core/Button';
 import MinimizeOutlinedIcon from '@material-ui/icons/MinimizeOutlined';
 import IconButton from '@material-ui/core/IconButton';
 
-const CN = 'chat-control-center'
+const CN = 'chat-control-center';
 
 class ChatControlCenter extends Component {
   constructor(props) {

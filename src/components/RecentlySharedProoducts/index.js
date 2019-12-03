@@ -1,1 +1,1 @@
-export {default} from './RecentlySharedProoducts'
+export { default } from './RecentlySharedProoducts';

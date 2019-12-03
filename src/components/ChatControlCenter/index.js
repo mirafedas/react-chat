@@ -1,1 +1,1 @@
-export {default} from './ChatControlCenter';
+export { default } from './ChatControlCenter';

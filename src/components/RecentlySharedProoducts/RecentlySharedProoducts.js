@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import './RecentlySharedProoducts.scss'
+import './RecentlySharedProoducts.scss';
 
-const CN = 'recently-shared-products'
+const CN = 'recently-shared-products';
+
 class RecentlySharedProoducts extends Component {
   render() {
     return (

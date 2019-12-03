@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import './ActiveChats.scss'
+import './ActiveChats.scss';
 
-const CN = 'active-chats'
+const CN = 'active-chats';
 
 class ActiveChats extends Component {
   constructor(props) {
@@ -13,6 +13,7 @@ class ActiveChats extends Component {
       onlineChat: false,
     }
   }
+
   render() {
     const { onlineFamily, onlineChat } = this.state;
     const familyChat = 'Family chat';
@@ -22,7 +23,6 @@ class ActiveChats extends Component {
       <div className={`${CN}__wrapper`}>
         <h5 className={`${CN}__title`}>Active chats</h5>
         <div className={`${CN}__active-chats`}>
-        
           <div className={onlineFamily ? `${CN}__onlineStatus online` : `${CN}__onlineStatus offline`}></div>
           <span>{familyChat}</span>
         </div>
