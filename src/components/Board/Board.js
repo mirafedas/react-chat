@@ -1,5 +1,6 @@
 import React from 'react';
-import { DndProvider, useDrop } from 'react-dnd';
+import { useDrop } from 'react-dnd';
+import { DndProvider } from 'react-dnd-cjs';
 import HTML5Backend from 'react-dnd-html5-backend';
 
 import SmallChatWindow from '../SmallChatWindow';

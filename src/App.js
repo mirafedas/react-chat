@@ -1,6 +1,6 @@
 import React from 'react';
 import Particles from 'react-particles-js';
-import { DndProvider } from 'react-dnd';
+import { DndProvider } from 'react-dnd-cjs';
 import HTML5Backend from 'react-dnd-html5-backend';
 
 import ChatControlCenter from './components/ChatControlCenter';
