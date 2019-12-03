@@ -1,8 +1,10 @@
 import React from 'react';
 import Particles from 'react-particles-js';
-import ChatControlCenter from './components/ChatControlCenter';
+import { DndProvider } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 
-import SmallChatWindow from './components/SmallChatWindow';
+import ChatControlCenter from './components/ChatControlCenter';
+import Board from './components/Board';
 import particlesParams from './constants/particlesParams';
 
 import './App.scss';
@@ -19,14 +21,18 @@ const particlesStyles = {
 };
 
 const App = () => (
-  <div className={CN}>
-    <SmallChatWindow />
-    <ChatControlCenter />
-    <Particles
-      params={particlesParams}
-      style={particlesStyles}
-    />
-  </div>
+  <DndProvider backend={HTML5Backend}>
+    <div className={`${CN}`}>
+      <div className="control-center-container">
+        <ChatControlCenter />
+      </div>
+      <Board />
+      <Particles
+        params={particlesParams}
+        style={particlesStyles}
+      />
+    </div>
+  </DndProvider>
 );
 
 export default App;
