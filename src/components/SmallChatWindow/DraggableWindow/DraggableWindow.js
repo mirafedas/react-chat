@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDrag } from 'react-dnd';
+import { useDrag } from 'react-dnd-cjs';
 
 import MinimizeOutlinedIcon from '@material-ui/icons/MinimizeOutlined';
 import SettingsApplicationsOutlinedIcon from '@material-ui/icons/SettingsApplicationsOutlined';
