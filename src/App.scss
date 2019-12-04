@@ -1,5 +1,12 @@
 @import './scss/global_styles';
 
 .app {
+  display: flex;
+  height: 100%;
   font-family: $main-font;
+}
+
+.handle {
+  max-height: 400px;
+  height: fit-content;
 }

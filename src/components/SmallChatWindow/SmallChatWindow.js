@@ -33,9 +33,10 @@ class SmallChatWindow extends React.Component {
   render() {
     const chatTitle = 'Chat title';
     const { isMinimized } = this.state;
+    const { customClassName } = this.props;
 
     return (
-      <div className={CN}>
+      <div className={`${CN} ${customClassName}`}>
         <div className={`${CN}__title-wrapper`}>
           <IconButton
             type="submit"
@@ -64,10 +65,12 @@ class SmallChatWindow extends React.Component {
         <div className={isMinimized ? `${CN}__hidden` : `${CN}__dialogue-wrapper`} />
         <div className={isMinimized ? `${CN}__hidden` : `${CN}__input-wrapper`}>
           <TextField
+            ref={(node) => { this.node = node; }}
             className={`${CN}__dialogue-input`}
             id="outlined-basic"
             label="Your message"
             variant="outlined"
+            onMouseDown={(e) => e.stopPropagation()}
           />
           <IconButton className={`${CN}__send-btn`}>
             <SendIcon fontSize="large" />
