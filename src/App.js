@@ -4,6 +4,7 @@ import Draggable from 'react-draggable';
 
 import ChatControlCenter from './components/ChatControlCenter';
 import SmallChatWindow from './components/SmallChatWindow';
+import Login from './components/Login';
 import particlesParams from './constants/particlesParams';
 
 import './App.scss';
@@ -21,10 +22,11 @@ const particlesStyles = {
 
 const App = () => (
   <div className={CN}>
+    <Login />
     <ChatControlCenter />
     <Draggable
       handle=".handle"
-      defaultPosition={{ x: 320, y: 0 }}
+      defaultPosition={{ x: 920, y: 0 }}
       grid={[25, 25]}
       scale={1}
 
