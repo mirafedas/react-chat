@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import ls from 'local-storage';
 
 import TextField from '@material-ui/core/TextField';
@@ -13,10 +13,11 @@ const CN = 'login-window';
 
 const Login = () => {
   const chatTitle = 'Log in';
+  const loginInput = useRef();
 
-  const saveUsername = (name) => {
-    console.log(name.target)
-    // ls.set('username', name);
+  const saveUsername = () => {
+    const username = loginInput.current.value;
+    ls.set('name', username);
   };
 
   return (
@@ -26,9 +27,10 @@ const Login = () => {
       </div>
       <div className={`${CN}__dialogue-wrapper`}>
         <TextField
+          inputRef={loginInput}
           className={`${CN}__text-input`}
           id="input-with-icon-textfield"
-          label="TextField"
+          label="Username"
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
@@ -41,7 +43,7 @@ const Login = () => {
           variant="contained"
           color="primary"
           className={`${CN}__enter-btn btn`}
-          onClick={(name) => saveUsername(name)}
+          onClick={saveUsername}
         >
           Log in
         </Button>
