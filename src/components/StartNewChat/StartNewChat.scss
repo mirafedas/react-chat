@@ -11,8 +11,6 @@
   background-color: $white;
   border: 1px solid $darkgreen;
 
-  
-
   &__title-wrapper {
     display: flex;
     justify-content: space-between;
@@ -40,6 +38,7 @@
     text-align: center;
     overflow: scroll;
   }
+  
   &__name-input,
   &__title-input {
     width: 200px;
