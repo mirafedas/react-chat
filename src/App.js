@@ -29,7 +29,6 @@ const App = () => (
       defaultPosition={{ x: 920, y: 0 }}
       grid={[25, 25]}
       scale={1}
-
     >
       <div className="handle">
         <SmallChatWindow />
