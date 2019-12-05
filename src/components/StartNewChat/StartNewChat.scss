@@ -1,0 +1,56 @@
+@import '../../scss/global_styles';
+
+.start-new-chat-window {
+  position: fixed;
+  left: 65%;
+  top: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  background-color: $white;
+  border: 1px solid $darkgreen;
+
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    height: 30px;
+    width: 100%;
+    background-color: $limegreen;
+    border-bottom: 1px solid $darkgreen;
+  }
+
+  &__title-container {
+    width: 90%;
+    text-align: center;
+  }
+
+  &__dialogue-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 275px;
+    width: 90%;
+    margin-bottom: 10px;
+    text-align: center;
+    overflow: scroll;
+  }
+  
+  &__name-input,
+  &__title-input {
+    width: 200px;
+  }
+
+  &__enter-btn {
+    &.btn{
+      margin: 20px;
+      
+      &:hover{
+        color: $orange;
+      }
+    }
+  }
+}
