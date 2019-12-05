@@ -6,6 +6,7 @@ import ChatControlCenter from './components/ChatControlCenter';
 import SmallChatWindow from './components/SmallChatWindow';
 import Login from './components/Login';
 import particlesParams from './constants/particlesParams';
+import StartNewChat from './components/StartNewChat';
 
 import './App.scss';
 
@@ -24,6 +25,7 @@ const App = () => (
   <div className={CN}>
     <Login />
     <ChatControlCenter />
+    <StartNewChat />
     <Draggable
       handle=".handle"
       defaultPosition={{ x: 920, y: 0 }}
