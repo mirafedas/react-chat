@@ -1,8 +1,8 @@
 @import '../../scss/global_styles';
 
-.start-new-chat-window {
+.join-chat-window {
   position: fixed;
-  left: 65%;
+  left: 30%;
   top: 65%;
   display: flex;
   flex-direction: column;
@@ -10,8 +10,6 @@
   width: 300px;
   background-color: $white;
   border: 1px solid $darkgreen;
-
-  
 
   &__title-wrapper {
     display: flex;

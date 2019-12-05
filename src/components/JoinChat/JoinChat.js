@@ -8,32 +8,32 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import Button from '@material-ui/core/Button';
 import MinimizeOutlinedIcon from '@material-ui/icons/MinimizeOutlined';
  
-import './StartNewChat.scss';
+import './JoinChat.scss';
  
-const CN = 'start-new-chat-window';
+const CN = 'join-chat-window';
  
-class StartNewChat extends Component {
+class JoinChat extends Component {
   constructor(props) {
     super(props);
  
     this.state = {
-      chatName: 'Start new chat',
+      chatName: 'Join existing chat',
       closed: false
     };
  
     this.name = createRef();
-    this.title = createRef();
+    this.chatCode = createRef();
     this.saveUsername = this.saveUsername.bind(this);
     this.closeWindow = this.closeWindow.bind(this);
   }
  
   saveUsername() {
     const usernameInChat = this.name.current.value;
-    const chatTitle = this.title.current.value;
-    const chatData = [usernameInChat, chatTitle];
+    const joinChatCode = this.chatCode.current.value;
+    const chatData = [usernameInChat, joinChatCode];
  
-    console.log('name', usernameInChat, chatTitle, chatData);
-    ls.set('name', usernameInChat, chatTitle);
+    console.log('name', usernameInChat, joinChatCode, chatData);
+    ls.set('name', usernameInChat, joinChatCode);
   }
 
   closeWindow() {
@@ -46,9 +46,9 @@ class StartNewChat extends Component {
  
   render() {
     const { chatName, closed } = this.state;
-    
+
     if (closed) return null;
-    
+ 
     return (
       <div className={CN}>
         <div className={`${CN}__title-wrapper`}>
@@ -68,14 +68,13 @@ class StartNewChat extends Component {
         </div>
         <div className={`${CN}__dialogue-wrapper`}>
           <TextField
-            inputRef={this.name}
+            inputRef={this.chatCode}
             className={`${CN}__title-input`}
             id="input-with-icon-textfield"
-            label="Chat title"
+            label="Join code"
           />
           <TextField
-            onChange={this.onChange}
-            inputRef={this.title}
+            inputRef={this.name}
             className={`${CN}__name-input`}
             id="input-with-icon-textfield"
             label="Username"
@@ -89,11 +88,11 @@ class StartNewChat extends Component {
           />
           <Button
             variant="contained"
-            color="primary"
+            color="secondary"
             className={`${CN}__enter-btn btn`}
             onClick={this.saveUsername}
           >
-            Start new chat
+            Join chat
           </Button>
         </div>
       </div>
@@ -101,4 +100,4 @@ class StartNewChat extends Component {
   }
 }
  
-export default StartNewChat;
+export default JoinChat;
